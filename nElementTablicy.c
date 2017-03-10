@@ -9,6 +9,8 @@ int main() {
 
   int tSize;
   int whichOne;
+  int *array;
+  int i;
 
   printf("Podaj wielkosc tablicy oraz ktory najmniejszy element: ");
   scanf("%d", &tSize);
@@ -16,17 +18,15 @@ int main() {
 
   if (whichOne>tSize) {
 
-    printf("ERROR: ciag liczy tylko ");
-    printf("%d", tSize);
-    printf(" elementow.");
+    printf("ERROR: ciag liczy tylko %d elementow\n", tSize);
 
   } else {
 
     whichOne=whichOne-1;
-    int *array = (int*)malloc(tSize*sizeof(int));
+    array = (int*)malloc(tSize*sizeof(int));
     printf("Podaj dane do tablicy: ");
 
-    for (int i = 0; i < tSize; i++) {
+    for (i = 0; i < tSize; i++) {
       scanf("%i",&array[i]);
     }
 
